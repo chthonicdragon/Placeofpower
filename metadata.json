@@ -1,0 +1,6 @@
+{
+  "name": "Esoterica OS: Places of Power",
+  "description": "A mystical map application for discovering and sharing sacred sites, ancient portals, and personal spiritual landmarks.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}

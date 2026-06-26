@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --sacred-dark: #090310;
+  --sacred-purple: #4c1d95;
+  --sacred-gold: #d97706;
+  --sacred-energy: #8b5cf6;
+  --sacred-text: #e0d8f0;
+  --glass-bg: rgba(15, 10, 31, 0.7);
+  --map-filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(110%) grayscale(0.8);
+  --border-white: rgba(255, 255, 255, 0.1);
+}
+
+.ethereal {
+  --sacred-dark: #fdfbf7;
+  --sacred-purple: #a78bfa;
+  --sacred-gold: #92400e;
+  --sacred-energy: #7c3aed;
+  --sacred-text: #451a03;
+  --glass-bg: rgba(253, 251, 247, 0.8);
+  --map-filter: sepia(0.4) contrast(100%) brightness(105%) grayscale(0.2);
+  --border-white: rgba(69, 26, 3, 0.1);
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-sacred-dark: var(--sacred-dark);
+  --color-sacred-purple: var(--sacred-purple);
+  --color-sacred-gold: var(--sacred-gold);
+  --color-sacred-energy: var(--sacred-energy);
+  --color-sacred-text: var(--sacred-text);
+}
+
+@layer base {
+  body {
+    @apply bg-sacred-dark text-sacred-text antialiased selection:bg-purple-500/30 transition-colors duration-500;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+.sacred-grid {
+  background-image: radial-gradient(var(--sacred-text) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.1;
+}
+
+.glass-panel {
+  background-color: var(--glass-bg);
+  @apply backdrop-blur-2xl border shadow-[0_20px_50px_rgba(0,0,0,0.2)];
+  border-color: var(--border-white);
+}
+
+.glass-panel-dark {
+  @apply bg-black/60 backdrop-blur-2xl border border-white/10 shadow-2xl;
+}
+
+.energy-glow {
+  box-shadow: 0 0 20px rgba(217, 119, 6, 0.4);
+}
+
+@keyframes energy-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.animate-energy {
+  animation: energy-pulse 4s infinite ease-in-out;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-white/20 transition-colors;
+}
+
+
