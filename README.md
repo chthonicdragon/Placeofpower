@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Place of Power
 
-# Run and deploy your AI Studio app
+Experimental AI-assisted geospatial knowledge prototype.
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/7f8127e2-ae05-4442-928d-96a72bf33601
+Place of Power explores how locations, cultural context, symbolic meaning, and user research can be combined in an interactive AI-assisted interface.
 
-## Run Locally
+The project was created as a rapid product prototype using AI-assisted development.
 
-**Prerequisites:**  Node.js
+## What it explores
 
+- Geospatial knowledge organization
+- AI-assisted research and summarization
+- Contextual information linked to places
+- Structured user journeys
+- Prompt and interface experimentation
+- Rapid product prototyping
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## My role
+
+I developed the concept, defined the product logic and user flows, directed AI-assisted implementation, reviewed the generated code, and tested the prototype.
+
+## Status
+
+Experimental prototype. Not intended for production use.
+
+## Local development
+
+**Prerequisites:** Node.js
+
+```bash
+npm install
+```
+
+Create `.env.local` and add the required Gemini API key:
+
+```env
+GEMINI_API_KEY=your_key_here
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+## Notes
+
+This repository demonstrates my approach to AI-assisted product discovery, prototyping, and interface design.
